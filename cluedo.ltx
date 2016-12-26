@@ -1,0 +1,74 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\setlist{nosep}
+\pagestyle{empty}
+
+\begin{document}
+
+% define an individual sheet as \thesheet
+
+\newcommand{\thesheet}[0]{
+\fbox{
+\hspace{0.5cm}
+\begin{minipage}[t][13.2cm][c]{7.3cm}
+
+\setlength\parindent{0pt}
+\setlength\parskip{6pt}
+
+% so = extra letter spacing (using soul package)
+{\centering \textbf{\so{\large DETECTIVE NOTES}}\par}
+\vspace{6pt}
+
+\textbf{Suspected Persons:}
+\begin{itemize}[leftmargin=6pt]
+    \item[] Col. Mustard
+    \item[] Prof. Plum
+    \item[] Rev. Green
+    \item[] Mrs. Peacock
+    \item[] Miss Scarlett
+    \item[] Mrs. White
+\end{itemize}
+
+\textbf{Probably Implements:}
+\begin{itemize}[leftmargin=6pt]
+    \item[] Dagger
+    \item[] Candlestick
+    \item[] Revolver
+    \item[] Rope
+    \item[] Lead Piping
+    \item[] Spanner
+\end{itemize}
+
+\textbf{Suspected Scene of Murder:}
+\begin{itemize}[leftmargin=6pt]
+    \item[] Hall
+    \item[] Lounge
+    \item[] Dining Room
+    \item[] Kitchen
+    \item[] Ball Room
+    \item[] Conservatory
+    \item[] Billiard Room
+    \item[] Library
+    \item[] Study
+\end{itemize}
+
+\end{minipage}
+\hspace{0.5cm}
+} % end fbox
+} % end definition
+
+
+% put four sheets on an A4 page
+
+\thesheet \hspace{-9pt} \thesheet
+
+\vspace{-1pt}
+
+\thesheet \hspace{-9pt} \thesheet
+
+\end{document}
